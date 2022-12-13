@@ -1,0 +1,19 @@
+
+.button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 0.2em;
+    padding: 1em;
+    margin-top: 1em;
+    
+    color: #000000;
+    background-color: #ffffff;
+    transition: all 0.1s ease;
+    font-weight: bold;
+    transform: translateY(-0.2em);
+}
+.button:active{
+    filter: brightness(0.7);
+    transform: translateY(0em);
+}

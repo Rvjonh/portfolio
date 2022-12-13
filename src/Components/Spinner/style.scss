@@ -1,0 +1,30 @@
+
+
+
+
+.spinner{
+    width: 3em;
+    height: 3em;
+    margin: 1em;
+
+    .spinner-container{
+        width: inherit;
+        height: inherit;
+
+        .spiner-line{
+            width: inherit;
+            height: inherit;
+
+            border-radius: 50%;
+            border: 0.5em solid rgb(255, 255, 255);
+            border-bottom: 0.5em solid rgb(0, 0, 0);
+            animation: turn-around 0.5s infinite linear;
+            transform: rotate(0deg);
+        }
+    }
+}
+
+@keyframes turn-around {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}

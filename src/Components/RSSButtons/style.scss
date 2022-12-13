@@ -1,0 +1,19 @@
+@import './../../Stylies/Layout.scss';
+
+.rss-lista{
+
+    figure{
+        picture{
+            background-color: white;
+            border-radius: 50%;
+            padding: 0.5em;
+            img{
+                transition: all 0.25s ease;
+                filter: brightness(0);
+            }
+        }
+        picture:hover img{
+            filter: brightness(1);
+        }
+    }
+}

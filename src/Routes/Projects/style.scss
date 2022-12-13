@@ -1,0 +1,54 @@
+
+@import './../../Stylies/Layout.scss';
+
+
+.projects-section{
+    width: 100%;
+    padding-bottom: 5em;
+    section{
+        padding: 0;
+    }
+}
+
+.projects-header {
+    @extend .container-column;
+    
+    .title-header{
+        align-self: flex-start;
+    }
+
+    .text-edited{
+        width: 100%;
+        max-width: 45em;
+    }
+}
+
+.projects-list{
+    @extend .container-column;
+
+    .projects-container{
+        @extend .container-column;
+        width: 100%;
+    }
+}
+
+.small-projects-list{
+    
+    .title-projects{
+        @extend .container-row;
+        justify-content: center;
+    }
+
+
+
+    .experiments-panel{
+        @extend .container-row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin: 2em 0;
+
+        article{
+            margin: 0.5em;
+        }
+    }
+}

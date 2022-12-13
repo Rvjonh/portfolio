@@ -1,0 +1,24 @@
+@import './../../Stylies/Layout.scss';
+
+.characteristics{
+    display: flex;
+    max-width: 35em;
+    margin: 2em auto;
+    *{
+        flex: 1;
+    }
+}
+
+.img-edited{
+    picture{
+        width: 6em;
+        height: 6em;
+        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+        background-color: #008cff;
+        padding: 2em;
+    }
+}
+.img-edited + .img-edited{
+    margin-left: 1em;
+}
+

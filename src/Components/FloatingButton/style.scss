@@ -1,0 +1,142 @@
+@import './../../Stylies/Animations.scss';
+@import './../../Stylies/Layout.scss';
+
+.float-container{
+    @extend .container-column;
+    flex-direction: column-reverse;
+    width: 0px;
+    height: 0px;
+    position: sticky;
+    z-index: 3;
+    top: 95vh;
+    align-self: flex-start;
+    border: 1px solid rgb(0, 0, 0);
+    margin-left: 0%;
+    transition: all 0.5s ease;
+
+    .float-button{
+        @extend .container-column;
+        justify-content: center;
+        width: 5em;
+        height: 5em;
+        position: absolute;
+        cursor: pointer;
+        border-radius: 50%;
+        font-weight: bolder;
+        color: rgb(0, 0, 0);
+        background-color: rgb(0, 140, 255);
+        outline: 0.2em solid rgb(0, 0, 0);
+
+        @extend .ani-show-size;
+        transition: all 0.25s ease;
+
+        .float-img{
+            width: 60%;
+            height: 60%;
+            object-fit: contain;
+            transition: all 0.25s ease;
+        }
+    }
+    .float-button:active{
+        transform: scale(0.8);
+        .float-img{
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+        }
+    }
+
+    .float-content{
+        color: black;
+        position: absolute;
+        bottom: 4em;
+        @extend .container-column;
+    }
+}
+
+@keyframes show-to-up {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.float-buttons{
+    width: 0em;
+
+    figure{
+        picture{
+            padding: 0em;
+        }
+    }
+}
+
+.float-buttons.active{
+    animation: show-in 0.25s ease forwards;
+
+    figure picture{
+        animation: show-in-pic 0.25s ease forwards;
+    }
+}
+@keyframes show-in {
+    from{width: 0em;}
+    to{width: 4em;}
+}
+@keyframes show-in-pic {
+    from{
+        padding: 0;
+        border: 0em solid rgb(0, 0, 0);
+    }
+    to{
+        padding: 0.75em;
+        border: 0.2em solid rgb(0, 0, 0);
+    }
+}
+
+
+
+.float-buttons.desactive{
+    animation: show-out 0.25s ease forwards;
+    
+    figure picture{
+        animation: show-out-pic 0.25s ease forwards;
+    }
+}
+@keyframes show-out {
+    from{width: 4em;}
+    to{width: 0em;}
+}
+@keyframes show-out-pic {
+    from{padding: 0.75em;}
+    to{padding: 0;}
+}
+
+.float-container{
+    .float-button{
+        filter: brightness(0.7);
+    }
+}
+.float-container:hover{
+    .float-button:hover{
+        filter: brightness(1);
+    }
+    .float-button, .float-content:hover{
+        filter: brightness(1);
+    }
+}
+
+.float-container.left{
+    margin-left: 10%;
+}
+
+.float-container.right{
+    animation: show-from-right 0.5s ease forwards;
+}
+@keyframes show-from-right  {
+    from{
+        opacity: 0;
+        margin-left: 100%;
+    }
+    to{
+        opacity: 1;
+        margin-left: 90%;
+    }
+}

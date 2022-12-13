@@ -1,0 +1,40 @@
+
+
+.column-flex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    .item-columna-flex{
+        flex: 1 33% 20em;
+        max-width: 30em;
+        width: 100%;
+        margin: 0.5em 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        picture{
+            width: 30%;
+        }
+        figcaption{
+            width: 70%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        img{
+            max-width: 5em;
+            max-height: 5em;
+        }
+        h4{
+            font-size: 1.2rem;
+            font-weight: bolder;
+        }
+
+    }
+}

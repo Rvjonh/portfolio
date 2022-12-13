@@ -1,0 +1,13 @@
+
+/* Media queries CSS */
+@mixin mqw($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin mqh($size) {
+    @media screen and (min-height: $size) {
+        @content;
+    }
+}

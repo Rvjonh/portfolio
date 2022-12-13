@@ -1,0 +1,19 @@
+
+
+.loader-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader::after{
+    content: ".";
+    font-size: 1.2rem;
+    animation: show-points 1s ease infinite;
+}
+@keyframes show-points {
+    from{content: ".";}
+    55%{content: "..";}
+    to{content: "...";}
+}

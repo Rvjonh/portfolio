@@ -1,0 +1,27 @@
+@import './../../Stylies/MediaQueries.scss';
+@import './../../Stylies/Layout.scss';
+
+.layout-limit{
+    @extend .container-row;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+
+    transition: all 0.25s ease;
+
+    background: linear-gradient(to right, rgb(100, 100, 100), rgb(0, 0, 0) 5%, rgb(0, 0, 0) 95%, rgb(100, 100, 100));
+    background-size: 150% 100%;
+    background-position: 50% 50%;
+    
+    @include mqw(81em) {
+        background-size: 100% 100%;
+    }
+}
+
+.layout{
+    @extend .container-column;
+    justify-content: center;
+    width: 100%;
+    max-width: 80em;
+    min-height: 100vh;
+}

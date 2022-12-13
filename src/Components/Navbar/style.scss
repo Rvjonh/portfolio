@@ -1,0 +1,197 @@
+@import './../../Stylies/MediaQueries.scss';
+
+.button-menu{
+    @include mqw(45em){
+        display: none;
+    }
+}
+
+.navbar-container{
+    position: absolute;
+    min-height: 100vh;
+    width: 0%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(100, 100, 100, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    z-index: 5;
+}
+
+.navbar-container.active{
+    width: 100%;
+    .navbar{
+        animation: show-menu 0.4s forwards;
+    }
+}
+
+@keyframes show-menu {
+    from{width: 1%;}
+    to{width: 100%;}
+}
+@keyframes show-item {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.navbar{
+    width: 85%;
+    height: 100%;
+    max-width: 20em;
+    margin-left: auto;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .navbar-list{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        list-style-type: none;
+        margin-top: 2em;
+
+        .navbar-item{
+            width: 100%;
+            color: rgb(255, 255, 255);
+            font-weight: bolder;
+            text-align: center;
+            margin: 0.2em 0;
+            animation: show-item  1s forwards;
+            
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 1em 0;
+                background-color: rgba(100, 100, 100, 0.5);
+                color: inherit;
+                text-decoration: none;
+                transition: all 0.25s ease;
+            }
+            a:active{
+                color: inherit;
+                color: rgb(0, 127, 255);
+                text-decoration: none;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            a:hover{
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        .cv-item{
+            border: 0.2em solid rgb(0, 127, 255);
+            color: rgb(0, 127, 255);
+            border-radius: 0.2em;
+        }
+        .cv-item:active{
+            border: 0.2em solid rgb(255, 255, 255);
+            background-color: rgb(0, 127, 255);
+            a{
+                color: rgb(255, 255, 255);
+            }
+        }
+        .navbar-line{
+            display: none;
+        }
+    }
+}
+
+@include mqw(45em){
+
+    .navbar-container.active{
+        .navbar{
+            animation: none;
+        }
+    }
+
+    .navbar-container{
+        position:relative;
+        margin-left: auto;
+        width: 90%;
+        animation: none;
+        background-color: transparent;
+        min-height: auto;
+    }
+    
+    .navbar{
+        width: 90%;
+        background-color: transparent;
+        max-width: 35em;
+        overflow: visible;
+        min-height: auto;
+
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        animation: none;
+        
+        .navbar-list{
+            background-color: transparent;
+            flex-direction: row;
+            margin: 0;
+            opacity: 1;
+            animation: none;
+            position: relative;
+
+
+            .navbar-item{
+                margin: 0;
+                
+                a{
+                    border-bottom: none;
+                    padding: 0.5em 0;
+                    background-color: transparent;
+                }
+                a:hover{
+                    background-color: transparent;
+                }
+            }
+            
+
+            .navbar-line{
+                display: block;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                background-color: rgb(0, 127, 255);
+            }
+            .line{
+                display: block;
+                position: relative;
+                width: 100%;
+                max-width: 93px;
+                height: 100%;
+                opacity: 1;
+                transition: all 0.25s ease;
+            }
+            .line::after{
+                content: "";
+                position: absolute;
+                border: 1em;
+                height: 0.3em;
+                width: 100%;
+                left: 0;
+                bottom: -1.2em;
+                background-color: rgb(0, 127, 255);
+            }
+        }
+    }
+}

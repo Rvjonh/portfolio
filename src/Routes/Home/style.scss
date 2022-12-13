@@ -1,0 +1,36 @@
+@import './../../Stylies/Layout.scss';
+@import './../../Stylies/MediaQueries.scss';
+
+
+.section-2parts{
+    display: flex;
+    @extend .container-column;
+
+    @include mqw(35em){
+        flex-direction: row
+    }
+}
+
+.box{
+    @extend .container-column;
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    @include mqw(60em){
+        margin: 2em
+    }
+}
+.small-box{
+    display: flex;
+    @extend .container-column;
+    width: 100%;
+    margin: 0.5em auto;
+    max-width: 35em;
+}
+
+.medium-box{
+    @extend .small-box;
+    max-width: 45em;
+}

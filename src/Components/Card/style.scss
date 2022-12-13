@@ -1,0 +1,87 @@
+
+@import './../../Stylies/Layout.scss';
+
+
+.card{
+    @extend .container-column;
+    width: 100%;
+    max-width: 18em;
+    box-sizing: border-box;
+    position: relative;
+
+    border-radius: 2px;
+    background: #ffffff;
+    box-shadow:  2px 2px 5px #696969,
+             -2px -2px 5px #696969,
+             -2px 2px 5px #696969,
+             2px -2px 5px #696969;
+    
+
+    transition: all 0.25s linear;
+
+    .card-header{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        figure{
+            height: 100%;
+            max-height: 12em;
+        }
+    }
+
+    .card-info{
+        margin-top: auto;
+        .title{
+            padding: 0.2em;
+            color: #008cff;
+            font-size: 1rem;
+            text-align: center;
+        }
+        .text{
+            margin: 0 0.2em;
+            color: rgb(0, 0, 0);
+            font-size: 0.8rem;
+        }
+    }
+
+    .item-links{
+        @extend .container-row;
+
+        a{
+            width: 2.5em;
+            height: 2.5em;
+            img{
+                border-radius: 0.2em;
+                padding: 0.1em;
+            }
+        }
+        a + a{
+            margin-left: 1em;
+        }
+    }
+}
+.card:hover{
+    box-shadow:  4px 4px 7px #696969,
+             -4px -4px 7px #696969,
+             -4px 4px 7px #696969,
+             4px -4px 7px #696969;
+
+    transform: scale(1.01);
+
+}
+
+.card::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(105, 105, 105, 0.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.20s ease-out;
+}
+.card:hover::after{
+    top: 100%;
+}

@@ -1,0 +1,29 @@
+@import './../../../Stylies/Animations.scss';
+@import './../../../Stylies/Layout.scss';
+
+.cookie-panel{
+    @extend .container-row;
+    justify-content: center;
+    align-items: center;
+    @extend .ani-show-opacity;
+    position: sticky;
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0,212,255,1);
+    background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(6,6,89,1) 32%, rgba(9,9,121,1) 33%, rgba(5,100,181,1) 65%, rgba(5,104,183,1) 66%, rgba(0,212,255,1) 100%);
+
+    padding: 1em;
+    * + *{
+        margin-left: 1em;
+    }
+
+    img{
+        position: absolute;
+        top: -9em;
+        width: 15em;
+        object-fit: contain;
+    }
+}

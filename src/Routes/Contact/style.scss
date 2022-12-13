@@ -1,0 +1,125 @@
+@import './../../Stylies/Layout.scss';
+@import './../../Stylies/Animations.scss';
+@import './../../Stylies/MediaQueries.scss';
+
+.contact-container{
+    @extend .container-column;
+    align-items: stretch;
+    padding: 0.5em;
+
+    section{
+        padding: 0;
+    }
+    @include mqw(45em){
+        flex-direction: row;
+
+        section{
+            padding-bottom: 5em;
+        }
+    }
+}
+
+
+.section-contact1{
+    @extend .container-column;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+
+    @extend .show-from-down;
+    border: 0.2em solid rgb(0, 0, 0);
+    background-color: rgba(0, 140, 255, 0.5);
+    padding: 0;
+
+
+    .contact-map{
+        width: 100%;
+        height: 100%;
+        iframe{
+            width: 100%;
+            height: 100%
+        }
+    }
+}
+
+.section-contact2{
+    @extend .container-column;
+    @extend .show-from-up;
+    flex: 1;
+
+    height: 100%;
+    background-color: rgb(37, 41, 52);
+    border: 0.2em solid black;
+
+    .text-msj{
+        text-align: center;
+        color:#008cff;
+        margin: 1em;
+    }
+
+    .contact-form{
+        width: 100%;
+
+        div{
+            display: flex;
+            width: 100%;
+        }
+
+        input, textarea{
+            width: 100%;
+            flex: 1;
+            background-color: rgb(0, 0, 0);
+            font-size: 1rem;
+            padding: 0.5em;
+        }
+        textarea{
+            resize: vertical;
+        }        
+
+        @include mqw(40em){
+            width: 90%;
+        }
+
+        .button-send-panel{
+            @extend .container-row;
+            justify-content: flex-end;
+
+            .button-send{
+                border: 0.1em solid #008cff;
+                background-color: rgb(0, 0, 0) !important;
+                overflow: hidden;
+                span{
+                    position: relative;
+                    color: rgb(255, 255, 255);
+                    z-index: 2;
+                }
+            }
+            .button-send:hover{
+                span{
+                    color: rgb(0, 0, 0);
+                }
+            }            
+            .button-send:hover:before{
+                right: 0em;
+                left: 0em;
+            }
+            .button-send::before{
+                content: "";
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                bottom: 0;
+                right: 10em;
+                left: -10em;
+                transform: translateX(20em);
+                transition: all 0.25s ease;
+                background-color: #008cff;
+                transform: skew(-30deg);
+            }
+            .button-send:active::before{
+                left: 25%;
+                right: 25%;
+            }
+        }
+    }
+}

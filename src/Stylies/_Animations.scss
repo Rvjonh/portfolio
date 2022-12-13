@@ -1,0 +1,73 @@
+
+
+.ani-show-opacity{
+    animation: show-opacity 0.25s ease forwards;
+}
+@keyframes show-opacity  {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+.ani-show-from-left{
+    animation: show-from-left 0.5s ease forwards;
+}
+@keyframes show-from-left {
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0%;
+    }
+}
+
+
+.ani-show-size{
+    animation: show-size 0.5s ease;
+}
+@keyframes show-size {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+.show-from-down{
+    animation:  ani-show-from-down 0.25s ease;
+}
+@keyframes ani-show-from-down {
+    from{
+        transform: translateY(-20em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+
+.show-from-up{
+    animation:  ani-show-from-up 0.25s ease;
+}
+@keyframes ani-show-from-up {
+    from{
+        transform: translateY(20em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+
+
+.bounce-item{
+    animation: bounce 1s ease infinite;
+}
+@keyframes bounce {
+    0%   { transform: scale(1,1)}
+    10%  { transform: scale(1.1,.9)}
+    30%  { transform: scale(.9,1.1)}
+    50%  { transform: scale(1.05,.95)}
+    58%  { transform: scale(1,1)}
+    65%  { transform: scale(1,1)}
+    100% { transform: scale(1,1)}
+}

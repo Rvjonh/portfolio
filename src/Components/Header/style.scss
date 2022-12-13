@@ -1,0 +1,18 @@
+@import './../../Stylies/Layout.scss';
+@import './../../Stylies/MediaQueries.scss';
+
+.header{
+    @extend .container-row;
+    width: 100%;
+    max-width: 80em;
+    background-color: rgb(25, 25, 25);
+    justify-content: flex-start;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    @include mqw(45em) {
+        padding: 0.3em;
+    }
+
+}

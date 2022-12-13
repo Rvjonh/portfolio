@@ -1,0 +1,26 @@
+@import './../../Stylies/Layout.scss';
+@import './../../Stylies/MediaQueries.scss';
+
+
+.text-blog{
+    margin: 2em 0;
+    @include mqw(35em){
+        margin: 2em;
+    }
+}
+
+.posts-container{
+    @extend .container-row;
+    align-items: stretch;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 4em 0;
+}
+
+
+.links-controls{
+    @extend .container-row;
+    margin-top: 1em;
+}
+
+
