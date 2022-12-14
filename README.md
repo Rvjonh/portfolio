@@ -35,6 +35,14 @@ Enter the directory and install dependencies
     cd portfolio && npm i
 ```
 
+Enter a Email url to send emails in contact section
+
+On Windows copy the enviromental vars
+
+```bash
+    copy .env-copy .env
+```
+
 Execute the development server
 
 ```bash

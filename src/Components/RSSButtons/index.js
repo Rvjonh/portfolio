@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import './style.scss';
 
 import Picture from './../../Components/Picture';
@@ -46,7 +48,12 @@ export default function RSSList({ ...props}){
     return (
         <div {...props} className={`rss-lista ${props.className}`}>
             {
-                RSSItems.map((item,index)=>{
+                RSSItems.map((item, index)=>{
+                    if(!item.open_tab){
+                        return <Link to={item.url} key={index+"item"}>
+                                <Picture className="rss" srcRef={item.img} alt={item.alt} />
+                        </Link>
+                    }
                     return <a href={item.url} target={`${item.open_tab ? "_blank": "" }`} rel="noreferrer" key={index+"item"}>
                                 <Picture className="rss" srcRef={item.img} alt={item.alt} />
                             </a>
