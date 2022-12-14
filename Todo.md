@@ -1,7 +1,5 @@
 # To do to finish my portfolio
 
-* add send email feature
-
 1. add projects with description with
     * img to watch preview
     * description to share my idea
