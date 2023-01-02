@@ -10,6 +10,9 @@ import BounceTitle from './../../Components/BounceTitle';
 
 import { experimentals } from './projectsMedia';
 
+import WordyImg from './../../Assets/Projects/wordyImg.png';
+import todoImg from './../../Assets/Projects/todo-app.png';
+
 export default function Projects(){
     useScrollTop()
     
@@ -42,10 +45,24 @@ export function ProjectsSections(){
         <section className='projects-list'>
             
             <div className='projects-container'>
-                <ProjectCard />
-                <ProjectCard reversed={true}/>
-                <ProjectCard />
-                <ProjectCard reversed={true}/>
+
+                <ProjectCard title='Wordy - App to learn vocabulary for spanish speakers'
+                             img={WordyImg}
+                             link="https://aplicacion-wordy.netlify.app/"
+                             linkRepository="https://github.com/Rvjonh/wordy"
+                             description="A progressive web application which emulates exercises in apps like Duolingo, Memrise and others, helps users to practices and keep new vocabulary, the app uses web API's to work in different devices, allowing save the data and use them in multiple platforms. It's a full applications which allows user to create an account and manage dictionaries, which are sets of words or vocaburlary for the users to practice."
+                             listTechs={["Javascript","React", "Redux-toolkit", "Django", "Rest-API", "PWA"]}
+                             />
+
+                <ProjectCard title="Fullstack To-Do app with React and Django" 
+                             img={todoImg}
+                             link="https://rvjonh-todo-app.netlify.app/"
+                             linkRepository="https://github.com/Rvjonh/FullStack-ToDo-App"
+                             description="With this to-do app, log in and keep your activities, you could create an account and manage your tasks creating, deleting, updating then, filter them and check them in missing or completed. It has a minimalist design and it's a small copy of many of anothers similar projects."
+                             listTechs={["Javascript","React", "Redux-toolkit", "Django", "Rest-API", "PWA"]}
+                             reversed={true}
+                             />
+
             </div>
 
         </section>
