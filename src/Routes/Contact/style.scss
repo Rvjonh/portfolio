@@ -14,7 +14,8 @@
         flex-direction: row;
 
         section{
-            padding-bottom: 5em;
+            padding-bottom: 2em;
+            min-height: 40em;
         }
     }
 }
@@ -48,6 +49,7 @@
     flex: 1;
 
     height: 100%;
+    min-height: 30em;
     background-color: rgb(37, 41, 52);
     border: 0.2em solid black;
 
