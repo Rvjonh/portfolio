@@ -52,7 +52,7 @@ export default function  NavBar(){
                         <Link to="/blog">Blog</Link>
                     </li>
                     <li className='navbar-item cv-item'>
-                        <a href='https://www.google.com/'>
+                        <a href='https://drive.google.com/file/d/1MNUpmZA_MfhMAFvLHpIusqt1TjR-YJ_0/view?usp=share_link' target="_blank" rel="noreferrer">
                             Resume
                         </a>
                     </li>
